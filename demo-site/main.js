@@ -1,4 +1,4 @@
-//Mobile menu codes
+//Mobile menu open & close 
 function menuopen(){
     setTimeout(() => {
         document.getElementById("menuclose").style.visibility = "visible";
@@ -37,13 +37,12 @@ function scrollFunction() {
   }
 } 
 
-//Navs icon active codes
+//adding active class to navbar icons when clicked.
 $(document).ready(function() {
     $(".menu li #ds-element-sub").hide();
     $(".desktop-nav-center").hide();
     $(".menu #pages #custom-element-sub").hide();
     $(".mobile-menu li #element-sub").hide();
-    
     $(".mobile-menu li").click(function() {
         $(this).find(".fa-chevron-down").toggleClass("rtoate180");
         $("li a").removeClass("activemobile");
@@ -60,7 +59,7 @@ $(document).ready(function() {
             clickedLi.find("#element-sub").show();
         }
     });
-
+//adding active class on hover or adding animations on hover to some buttons.
     $(".menu li").hover(function() {
         $(this).find("#ds-element-sub").fadeIn(600);
         $(this).find("a:first").addClass("active");
@@ -110,7 +109,7 @@ $(document).ready(function() {
 });
 
 
-//Swiper codes
+//Section Main's swiper.
 var swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 5000,
@@ -122,7 +121,8 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-//Scroll animation codes
+//Scroll animation codes for Main sections divs
+//THE REST OF THE ANIM_ELEMENTS&OBSERVER CODE BLOCK IS FOR SCROLL ANIMATION EVENTS. ITS ALL SAME BUT JUST FOR DIFFERENT DIVS AND ETC.
 const anim_elements = document.querySelectorAll(".centerer, .centerer-2, .centerer-3");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -141,6 +141,7 @@ for (let i = 0; i < anim_elements.length; i++){
   observer.observe(el);
 }
 
+//scroll animations for about section texts
 const element = document.querySelectorAll(".texts h2, .texts p, .learnmorebutton");
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -160,7 +161,7 @@ for (let i = 0; i < element.length; i++){
   const el2 = element[i];
   observer2.observe(el2);
 }
-
+//scroll animations for about sections img
 const element2 = document.querySelectorAll(".about-image");
 const observer3 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -180,7 +181,7 @@ for (let i = 0; i < element2.length; i++){
   const el3 = element2[i];
   observer3.observe(el3);
 }
-
+//scroll animations for .div-2 of section programs.
 const element3 = document.querySelectorAll(".div-2");
 const observer4 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -198,7 +199,7 @@ for (let i = 0; i < element3.length; i++){
   const el4 = element3[i];
   observer4.observe(el4);
 }
-
+//scroll animations for .div-1 of section programs.
 const element4 = document.querySelectorAll(".div-1");
 const observer5 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -216,7 +217,7 @@ for (let i = 0; i < element4.length; i++){
   const el5 = element4[i];
   observer5.observe(el5);
 }
-
+//scroll animations for .div-3 of section programs.
 const element5 = document.querySelectorAll(".div-3");
 const observer6 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -234,7 +235,7 @@ for (let i = 0; i < element5.length; i++){
   const el6 = element5[i];
   observer6.observe(el6);
 }
-
+//scroll animations for headers description and button of section programs.
 const element6 = document.querySelectorAll(".pg-header, .pg-desc, .pg-btn");
 const observer7 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -252,7 +253,7 @@ for (let i = 0; i < element6.length; i++){
   const el7 = element6[i];
   observer7.observe(el7);
 }
-
+//scroll animations for headers description and some other divs of section programs.
 const element7 = document.querySelectorAll(".ft-header, .ft-desc, .ic-ft-1-left, .ic-ft-1-right, .ic-ft-2-left, .ic-ft-2-right");
 const observer8 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -270,7 +271,7 @@ for (let i = 0; i < element7.length; i++){
   const el8 = element7[i];
   observer8.observe(el8);
 }
-
+//scroll animations for img of section events.
 const element8 = document.querySelectorAll(".right-md");
 const observer9 = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -343,6 +344,8 @@ for (let i = 0; i < element11.length; i++){
   observer12.observe(el12);
 }
 
+
+//swiper of reports section
 var swiper = new Swiper(".mySwiper1", {
   slidesPerView: 2,
   spaceBetween: 30,
@@ -384,7 +387,7 @@ for (let i = 0; i < element12.length; i++){
   observer13.observe(el13);
 }
 
-
+//swiper of photos section
 var swiper = new Swiper(".mySwiper2", {
   slidesPerView: 4,
   autoplay: {
